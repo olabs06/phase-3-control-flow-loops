@@ -1,5 +1,13 @@
+require "pry"
+
 def happy_new_year
   # your code here
+  counter = 10
+  until counter == 0
+    puts counter     
+    counter -= 1
+  end
+  puts "Happy New Year!"
 end
 
 # No need to modify this code! Use this to implement the fizzbuzz_printer method.
@@ -17,8 +25,17 @@ end
 
 def fizzbuzz_printer
   # your code here
+  (1..100).each {|i| puts fizzbuzz(i)}
 end
 
 def reverse_string(str)
   # your code here
+  str_array = str.split("")
+  n = str_array.length
+  new_array=[]
+  while n > 0
+    new_array.push(str_array[n-1])
+    n-=1
+  end
+  new_array.join()
 end
